@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Achievements of India</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header Section */
+        header {
+            background: #3a3a3a;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f4c10f;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            display: none; /* Hide all sections by default */
+            margin-bottom: 40px;
+        }
+
+        section.active {
+            display: block; /* Show only the active section */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f4c10f;
+            font-size: 1.8em;
+        }
+
+        /* Image Styles */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 80%; /* Adjust image width */
+            max-width: 600px; /* Max width for larger screens */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Contact Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        form input, form textarea {
+            width: 80%; /* Full width */
+            max-width: 600px; /* Max width for larger screens */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #f4c10f;
+            color: #333;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #e0b00c;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            footer {
+                position: static;
+            }
+        }
+    </style>
+    <script>
+        // Function to show the selected section
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll("main section");
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
+            document.getElementById(sectionId).classList.add("active");
+        }
+
+        // Show the home section by default on window load
+        window.onload = function() {
+            showSection('home');
+        }
+
+        // Form Validation
+        function validateForm(event) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name === "" || email === "" || message === "") {
+                alert("All fields are required.");
+                event.preventDefault();
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                event.preventDefault();
+                return false;
+            }
+
+            // If all validations pass
+            alert("Thank you for your message!");
+            return true;
+        }
+
+        // Attach form validation on DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', validateForm);
+        });
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Explore India's Historical Achievements</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('redFort')">Red Fort</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('tajMahal')">Taj Mahal</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('raniKiVav')">Rani Ki Vav</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('about')">About Us</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <h2>Welcome to India's Historical Achievements</h2>
+            <p><strong>Welcome to the Treasures of India's History. India, a land of ancient wonders and vibrant cultures, invites you to explore its rich tapestry of historical achievements that have shaped civilization itself. From the majestic Red Fort, a symbol of power and resilience, to the ethereal beauty of the Taj Mahal, each monument tells a story of love, artistry, and enduring legacy. As you embark on this journey, you will uncover the profound contributions of ancient scholars, artists, and architects who have left an indelible mark on the world.</strong></p>
+            <div class="image-container">
+                <img src="images/home.jpg" alt="Historical Monuments">
+            </div>
+        </section>
+
+        <!-- Red Fort Section -->
+        <section id="redFort">
+            <h2>Red Fort</h2>
+            <p><strong>The Red Fort, a UNESCO World Heritage Site, is a historical fortification in the city of Delhi. It was the main residence of the emperors of the Mughal dynasty for nearly 200 years. The fort's massive walls and stunning architecture reflect the grandeur of Mughal architecture. Constructed in the 17th century under the reign of Emperor Shah Jahan, this UNESCO World Heritage Site is renowned for its stunning red sandstone walls, intricate carvings, and sprawling gardens. It served as the main residence of Mughal emperors for nearly 200 years, becoming a symbol of power and resilience. The fort's impressive structures, including the iconic Lahori Gate and the beautiful Diwan-i-Khas, invite visitors to immerse themselves in a history filled with opulence, artistry, and cultural significance, making it a must-visit destination for anyone seeking to understand the soul of India.</strong></p>
+            <div class="image-container">
+                <img src="images/red-fort.jpg" alt="Red Fort">
+            </div>
+        </section>
+
+        <!-- Taj Mahal Section -->
+        <section id="tajMahal">
+            <h2>Taj Mahal</h2>
+            <p><strong>The Taj Mahal is an ivory-white marble mausoleum located in Agra, built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal. It is widely recognized as one of the most beautiful buildings in the world and is a symbol of love. Commissioned by Mughal Emperor Shah Jahan in memory of his beloved wife, Mumtaz Mahal, the construction began in 1632 and took approximately 22 years to complete, involving thousands of artisans, craftsmen, and laborers. This magnificent mausoleum is primarily made of white marble, which reflects hues of pink and orange during sunrise and sunset, creating a breathtaking spectacle. The Taj Mahal is renowned for its intricate inlay work, featuring semi-precious stones and exquisite carvings that adorn its surfaces. The surrounding gardens, reflecting pools, and beautifully designed walkways further enhance its ethereal beauty, making it a testament to Mughal architecture and a symbol of eternal love that draws millions of visitors from around the globe each year.</strong></p>
+            <div class="image-container">
+                <img src="images/taj-mahal.jpg" alt="Taj Mahal">
+            </div>
+        </section>
+
+        <!-- Rani Ki Vav Section -->
+        <section id="raniKiVav">
+            <h2>Rani Ki Vav</h2>
+            <p><strong>Rani Ki Vav, a stepwell situated in Patan, Gujarat, is another UNESCO World Heritage Site. It was built in the 11th century and is renowned for its intricate architecture and exquisite carvings, depicting various deities and motifs. Built during the reign of the Solanki dynasty, Rani Ki Vav is celebrated for its architectural brilliance and intricate craftsmanship. Originally constructed as a memorial for King Bhimdev I by his widow, Rani Udayamati, Rani Ki Vav not only served as a water reservoir but also as a social and cultural hub for the local community. The stepwell features a series of seven beautifully carved levels, adorned with over 1,000 exquisite sculptures depicting various deities, mythological figures, and intricate motifs that showcase the artistic prowess of the time. The architectural design, with its inverted temple structure, reflects the sophistication of ancient engineering, effectively utilizing gravity to provide water in the arid region. Rani Ki Vav stands as a testament to the ingenuity and artistry of India's heritage, captivating visitors with its elegance and historical significance.</strong></p>
+            <div class="image-container">
+                <img src="images/rani-ki-vav.jpg" alt="Rani Ki Vav">
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p><strong>Welcome to the Historical Achievements of India website! We are dedicated to showcasing the rich cultural heritage and historical milestones of India. Our mission is to educate and inspire individuals about the magnificent achievements of our ancestors, from awe-inspiring monuments to significant historical events.</strong></p>
+            <p><strong>Through our carefully curated content, we aim to provide a comprehensive overview of India's historical landmarks and the stories behind them. We believe that understanding our past is essential for appreciating our present and shaping our future.</strong></p>
+            <p><strong>Thank you for visiting our site, and we hope you enjoy exploring India's historical achievements with us!</strong></p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or feedback, feel free to reach out:</p>
+            <form id="contactForm" action="#" method="POST" novalidate>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Historical Achievements of India. All rights reserved.</p>
+    </footer>
+</body>
+</html>
